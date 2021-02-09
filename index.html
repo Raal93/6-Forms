@@ -49,7 +49,7 @@
             </label>
             <br /> <br /> <br />
             <label>
-              Napisz coś o tym mieście <br />
+              Write something about this place <br />
               <textarea
                 name="text"
                 value={this.state.text}
@@ -58,7 +58,7 @@
               </textarea>
             </label> <br /> <br />
             <label>
-              Czy lubisz to miasto?
+              Do you like this city?
            <input
                 name="isLiked"
                 type="checkbox"
@@ -67,7 +67,7 @@
               />
             </label> <br /> <br />
             <label>
-              Ile razy odwiedziłeś to miasto? <br />
+              How many times have you visited this city? <br />
               <select
                 name="visitedTimes"
                 value={this.state.visitedTimes}
@@ -77,7 +77,7 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="więcej niż 3">więcej</option>
+                <option value="more than 3 3">more</option>
               </select>
             </label>
 
@@ -101,7 +101,7 @@
       if (props.city) {
         summ1 = <div><h3>Napisałeś:</h3><p><strong>{props.city}</strong> {props.text}</p></div>
         summ2 = props.isLiked ?
-          <p>Zaznaczyłeś, że lubisz {props.city},</p> : <p>Zaznaczyłeś, że nie lubisz {props.city},</p>
+          <p>You checked that you like {props.city},</p> : <p>You checked that you don't like {props.city},</p>
         summ3 = <p>oraz byłeś tam {props.visitedTimes} razy.</p>
       }
       return <div>{summ1} {summ2} {summ3}</div>
