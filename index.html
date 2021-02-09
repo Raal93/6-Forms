@@ -39,7 +39,7 @@
         return (
           <div>
             <label>
-              Podaj miasto <br />
+              Write a city name <br />
               <input
                 name="city"
                 type="text"
@@ -77,7 +77,7 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="more than 3 3">more</option>
+                <option value="more than 3">more</option>
               </select>
             </label>
 
@@ -99,10 +99,10 @@
       let summ2 = ""
       let summ3 = ""
       if (props.city) {
-        summ1 = <div><h3>Napisałeś:</h3><p><strong>{props.city}</strong> {props.text}</p></div>
+        summ1 = <div><h3>You wrote:</h3><p><strong>{props.city}</strong> {props.text}</p></div>
         summ2 = props.isLiked ?
           <p>You checked that you like {props.city},</p> : <p>You checked that you don't like {props.city},</p>
-        summ3 = <p>oraz byłeś tam {props.visitedTimes} razy.</p>
+        summ3 = <p>and you've been there {props.visitedTimes} time(s).</p>
       }
       return <div>{summ1} {summ2} {summ3}</div>
     }
